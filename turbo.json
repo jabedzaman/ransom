@@ -1,0 +1,30 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "remoteCache": {
+    "enabled": true
+  },
+  "ui": "stream",
+  "tasks": {
+    "start:dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "build": {
+      "outputs": ["dist", ".next", "!.next/cache"],
+      "dependsOn": ["lint", "test"]
+    },
+    "test": {
+      "cache": false,
+      "env": ["NODE_ENV=test"]
+    },
+    "test:e2e": {
+      "cache": false,
+      "env": ["NODE_ENV=test"]
+    },
+    "start": {
+      "dependsOn": ["build"],
+      "env": ["NODE_ENV=production"]
+    },
+    "lint": {}
+  }
+}

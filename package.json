@@ -2,10 +2,6 @@
   "name": "ransom",
   "version": "0.0.1",
   "description": "Complete stater kit with auth, analytics, etc",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jabedzaman/ransom.git"
@@ -22,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/jabedzaman/ransom/issues"
   },
-  "homepage": "https://github.com/jabedzaman/ransom#readme"
+  "homepage": "https://github.com/jabedzaman/ransom#readme",
+  "packageManager": "pnpm@9.3.0",
+  "devDependencies": {
+    "turbo": "^2.0.3"
+  }
 }
