@@ -20,6 +20,15 @@
   },
   "homepage": "https://github.com/jabedzaman/ransom#readme",
   "packageManager": "pnpm@9.3.0",
+  "scripts": {
+    "build": "turbo build",
+    "test": "turbo test",
+    "test:e2e": "turbo test:e2e",
+    "start": "turbo start",
+    "start:dev": "turbo start:dev",
+    "lint": "turbo lint",
+    "maildev": "maildev"
+  },
   "devDependencies": {
     "turbo": "^2.0.3"
   }
