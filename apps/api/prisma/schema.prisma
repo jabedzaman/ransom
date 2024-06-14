@@ -1,0 +1,17 @@
+generator client {
+  provider      = "prisma-client-js"
+  // on macOS, uncomment the next line
+  binaryTargets = ["native"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  uuid          String  @id @default(uuid())
+  email         String  @unique
+  name          String?
+  password_hash String?
+}
