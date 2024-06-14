@@ -1,0 +1,26 @@
+{
+  "name": "ransom",
+  "version": "0.0.1",
+  "description": "Complete stater kit with auth, analytics, etc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jabedzaman/ransom.git"
+  },
+  "keywords": [
+    "starter",
+    "kit",
+    "nestjs",
+    "react",
+    "saas"
+  ],
+  "author": "jabedzaman <hi@jabed.dev> (https://jabed.dev/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jabedzaman/ransom/issues"
+  },
+  "homepage": "https://github.com/jabedzaman/ransom#readme"
+}
