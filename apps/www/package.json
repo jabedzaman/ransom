@@ -1,7 +1,7 @@
 {
-  "name": "@ransom/dashboard",
+  "name": "@ransom/www",
   "version": "0.0.1",
-  "description": "dashboard for ransom",
+  "description": "frontend for ransom",
   "author": "jabedzaman <hi@jabed.dev> (https://jabed.dev)",
   "private": true,
   "scripts": {
