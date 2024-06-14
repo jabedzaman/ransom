@@ -1,10 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import {
-  IsEmail,
-  IsNotEmpty,
-  IsString,
-  IsStrongPassword,
-} from 'class-validator';
+import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
 import { faker } from '@faker-js/faker';
 
 export class AuthSignUpDto {
@@ -24,6 +19,6 @@ export class AuthSignUpDto {
       length: 10,
     }),
   })
-  @IsStrongPassword()
+  @IsString()
   password: string;
 }

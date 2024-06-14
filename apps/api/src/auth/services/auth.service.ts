@@ -9,7 +9,7 @@ import { UsersService } from '@/modules/users/services/users.service';
 import { AuthLoginDto, AuthResponseDto, AuthSignUpDto } from '../dtos';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
-import { IAuthPayload } from '@ransom/types';
+import { IAuthPayload, ITokenResponse } from '@ransom/types';
 import { ArgonService } from '@/common/services/security/argon.service';
 
 @Injectable()
@@ -77,9 +77,7 @@ export class AuthService implements IAuthService {
     return { accessToken, refreshToken, user };
   };
 
-  generateTokens: (
-    payload: IAuthPayload,
-  ) => Promise<{ accessToken: string; refreshToken: string }> = async (
+  generateTokens: (payload: IAuthPayload) => Promise<ITokenResponse> = async (
     payload,
   ) => {
     const accessToken = this.jwtService.sign(payload, {
