@@ -1,0 +1,24 @@
+{
+  "name": "@ransom/types",
+  "version": "0.0.1",
+  "description": "shared lib for ransom",
+  "types": "types/index.d.ts",
+  "files": [
+    "types/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jabedzaman/ransom.git"
+  },
+  "keywords": [
+    "shared",
+    "types",
+    "ransom"
+  ],
+  "author": "jabedzaman <hi@jabed.dev> (https://jabed.dev/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jabedzaman/ransom/issues"
+  },
+  "homepage": "https://github.com/jabedzaman/ransom#readme"
+}

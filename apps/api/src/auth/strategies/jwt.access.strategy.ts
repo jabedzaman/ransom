@@ -2,8 +2,8 @@ import { ExtractJwt, Strategy } from 'passport-jwt';
 import { PassportStrategy } from '@nestjs/passport';
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { IAuthPayload } from '../types';
 import { PrismaService } from '@/common';
+import type { IAuthPayload } from '@ransom/types';
 
 @Injectable()
 export class AuthJwtAccessStrategy extends PassportStrategy(
