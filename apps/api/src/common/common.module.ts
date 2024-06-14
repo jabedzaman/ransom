@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import configs from '@/config';
 import { PrismaService } from './services/database/prisma.service';
+import { ArgonService } from './services/security/argon.service';
 
 @Module({
   controllers: [],
@@ -14,7 +15,7 @@ import { PrismaService } from './services/database/prisma.service';
       expandVariables: true,
     }),
   ],
-  providers: [PrismaService],
-  exports: [PrismaService],
+  providers: [PrismaService, ArgonService],
+  exports: [PrismaService, ArgonService],
 })
 export class CommonModule {}

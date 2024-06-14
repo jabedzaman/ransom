@@ -5,9 +5,13 @@ import configs from '@/config';
 import { CoreModule } from '@/core';
 import { CommonModule, PrismaService } from '@/common';
 import { TerminusModule } from '@nestjs/terminus';
+import { UsersModule } from '@/modules/users';
+import { AuthModule } from '@/auth';
 
 @Module({
   imports: [
+    UsersModule,
+    AuthModule,
     CoreModule,
     CommonModule,
     TerminusModule,
