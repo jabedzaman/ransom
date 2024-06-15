@@ -29,9 +29,12 @@ export class AuthController {
   @Public()
   @UseGuards(AuthJwtRefreshGuard)
   @Get('refresh')
-  async refresh(@AuthUser() user: IAuthPayload): Promise<ITokenResponse> {
-    return this.authService.generateTokens({
+  async refresh(
+    @AuthUser() user: IAuthPayload,
+  ): Promise<Omit<ITokenResponse, 'refreshToken'>> {
+    const { accessToken } = await this.authService.generateTokens({
       uuid: user.uuid,
     });
+    return { accessToken };
   }
 }

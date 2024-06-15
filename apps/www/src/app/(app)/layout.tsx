@@ -1,9 +1,14 @@
-import * as React from "react";
+import { Header } from "@/components/shared";
 
 export default function AppLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <>{children}</>;
+  return (
+    <>
+      <Header />
+      {children}
+    </>
+  );
 }

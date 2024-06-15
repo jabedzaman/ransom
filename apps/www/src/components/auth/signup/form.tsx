@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/form";
 import { signupValidation } from "./validation";
 import { authActions } from "@/lib/store/features";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 type SignUpFormValues = z.infer<typeof signupValidation>;
@@ -27,6 +27,8 @@ type SignUpFormValues = z.infer<typeof signupValidation>;
 export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const [signUp, { isLoading }] = authActions.useSignupMutation();
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const redirect = searchParams.get("redirect") || "/app";
   const form = useForm<SignUpFormValues>({
     resolver: zodResolver(signupValidation),
   });
@@ -38,7 +40,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
       email: values.email,
       password: values.password,
     });
-    if (!error) router.push("/");
+    if (!error) router.push(redirect);
   };
 
   return (

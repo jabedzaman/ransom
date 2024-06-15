@@ -1,14 +1,13 @@
 import * as React from "react";
 import { appConfig } from "@/config";
-import { Icons } from "@/components/ui/icons";
 import Link from "next/link";
+import { AuthHOC } from "@/components/auth";
 
 export default function AuthLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const loading = false;
   return (
     <>
       <div className="container relative min-h-screen flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
@@ -39,13 +38,7 @@ export default function AuthLayout({
             </blockquote>
           </div>
         </div>
-        {loading ? (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <Icons.spinner className="w-8 h-8 text-primary-500 animate-spin" />
-          </div>
-        ) : (
-          children
-        )}
+        <AuthHOC>{children}</AuthHOC>
       </div>
     </>
   );

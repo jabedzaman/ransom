@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 import { Icons } from "@/components/ui/icons";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { authActions } from "@/lib/store/features";
 import { loginValidation } from "./validation";
 import { useForm } from "react-hook-form";
@@ -20,7 +19,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 type LoginFormValues = z.infer<typeof loginValidation>;
@@ -28,6 +27,8 @@ type LoginFormValues = z.infer<typeof loginValidation>;
 export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const [login, { isLoading }] = authActions.useLoginMutation();
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const redirect = searchParams.get("redirect") || "/app";
 
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginValidation),
@@ -40,7 +41,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
       email: values.email,
       password: values.password,
     });
-    if (!error) router.push("/");
+    if (!error) router.push(redirect);
   };
 
   return (

@@ -1,9 +1,9 @@
-import * as React from "react";
+import { ProtectedHOC } from "@/components/auth";
 
 export default function DashboardLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <>{children}</>;
+  return <ProtectedHOC>{children}</ProtectedHOC>;
 }
