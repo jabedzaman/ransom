@@ -14,10 +14,14 @@ export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
   @Get('me')
-  async getMe(@AuthUser() user: IAuthPayload): Promise<UserResponseDto> {
+  async getMe(@AuthUser() user: IAuthPayload): Promise<{
+    user: UserResponseDto;
+  }> {
     return this.usersService.findUserByUuid(user.uuid).then((user) => {
       delete user.password_hash;
-      return user;
+      return {
+        user,
+      };
     });
   }
 }

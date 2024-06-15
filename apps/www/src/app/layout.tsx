@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import { soraSans } from "@/lib/fonts";
 import { CommonProvider } from "@/providers";
+import { Toaster } from "sonner";
 export { metadata } from "@/config";
 
 export default function RootLayout({
@@ -18,6 +19,7 @@ export default function RootLayout({
         )}
       >
         <CommonProvider>{children}</CommonProvider>
+        <Toaster theme="dark" />
       </body>
     </html>
   );
