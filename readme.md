@@ -20,17 +20,19 @@ Supercharge your launch with Ransom today!
 
 ## Features
 
-- 🔐 **Authentication**: Login, Register, Forgot Password, Reset Password, Email Verification, Social Login with Google, Facebook, Twitter, and GitHub
-- 🌍 **Internationalization**: Supports multiple languages with RTL support
-- 💳 **Payment Gateway**: Stripe integration for subscription-based payment
-- 🌑 **Dark Mode**: Light and Dark mode support
-- 🌐 **SEO**: SEO friendly with meta tags and Open Graph support
-- 📱 **Responsive**: Mobile-friendly design
-- ⚡ **Performance**: Optimized for performance with lazy loading and caching
-- 👨‍💻 **Developer-friendly**: Easy to understand, clean code with detailed documentation
-- ☁️ **Fully Serverless**: Deploy on Vercel, Netlify, or any serverless platform
-- 📄 **Landing & Blog**: Landing page and blog with mdx support
-- 🆓 **Open Source**: Fully open-source with MIT license
+- [x] 🔐 **Authentication**: Login, Register, Forgot Password, Reset Password, Email Verification, Social Login with Google, Facebook, Twitter, and GitHub
+- [ ] 🔑 **Authorization**: Role-based access control with permissions
+- [ ] 🌍 **Internationalization**: Supports multiple languages with RTL support
+- [ ] 💳 **Payment Gateway**: Stripe integration for subscription-based payment
+- [x] 🌑 **Dark Mode**: Light and Dark mode support
+- [x] 🌐 **SEO**: SEO friendly with meta tags and Open Graph support
+- [x] 📱 **Responsive**: Mobile-friendly design
+- [x] ⚡ **Performance**: Optimized for performance with lazy loading and caching
+- [x] 👨‍💻 **Developer-friendly**: Easy to understand, clean code with detailed documentation
+- [ ] ☁️ **Fully Serverless**: Deploy on Vercel, Netlify, or any serverless platform
+- [ ] 📄 **Landing & Blog**: Landing page and blog with mdx support
+- [ ] 📈 **Analytics**: Google Analytics integration
+- [x] 🆓 **Open Source**: Fully open-source with MIT license
 
 ## Tech Stack
 
